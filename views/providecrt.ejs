@@ -1,0 +1,46 @@
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">			    
+		    <form name="providecrt" action="/providecrt" method="post" enctype="multipart/form-data"> 
+				<div class="page-header">
+					<h1>
+						球場名稱
+					</h1>
+					<input type="text" name= 'crtName' placeholder="球場名稱" class="form-control">				
+				</div>
+				<div class="page-header">
+					<h1>
+						球場地點
+					</h1>
+					<input type="text" name= 'crtAddr' placeholder="球場地點" class="form-control">				
+				</div>
+				<div class="page-header">
+					<h1>
+						球場介紹
+					</h1>
+				<div class="ui-TextField ajax Module"><textarea name= 'crtInfo' class="content" placeholder="球場資訊、球框數量、地板品質 、交通資訊、開放時間、夜間照明等等..."></textarea></div>			   
+				</div>
+				<div class="page-header">
+					<h3>上傳圖片	
+						<input id="fileupload" type="file" name="file">				
+					</h3>					
+				</div>
+				<fieldset>
+					<legend>管理規章</legend>
+					<p>
+						<label>籃球幫為免費的籃球社群經營平台，提供的球場資訊須同意下列管理規章。</label>
+					</p>
+					<ol>
+						<li>
+							<label>提供的場地性質需與籃球運動相關。</label>
+						</li>
+						<li>
+							<label>籃球幫為公開平台，提供給大眾閱讀，分享。</label>
+						</li>
+					</ol> <label class="checkbox"><input type="checkbox" />同意</label> 
+					<button class="btn" type="submit" value='providecrt'>提交</button>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>

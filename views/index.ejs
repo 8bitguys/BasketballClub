@@ -1,0 +1,30 @@
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+		    <% if (docs) { %>
+		    <% for(var i=0; i< docs.length; i++){ %>
+		    	<% if (docs[i].clubName && docs[i].backgroundimg && docs[i].backgroundimg.url)  { %>
+					<div class="carousel slide" id="carousel-926043">
+					<div class="carousel-inner">
+						<div class="item active">
+					   		<a href=/club?clubname=<%= docs[i].clubName %> title="聯盟詳細資料">
+								<img alt="" src=<%=docs[i].backgroundimg.url%> />
+								<div class="carousel-caption">
+									<h4>
+										<%= docs[i].clubName %>
+									</h4>
+									<p>
+										<%= docs[i].clubInfo %>
+									</p>							
+								</div>
+							</a>	
+						</div>
+					</div>
+					</div>
+					<div> <h1> </h1> </div>
+				<% } %>
+			<% } %>
+			<% } %>
+		</div>
+	</div>
+</div>

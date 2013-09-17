@@ -1,0 +1,27 @@
+{
+  "name": "Boogle",
+  "version": "0.1.0",
+  "description": "",
+  "framework": "mvc",
+  "main": "app.js",
+  "logfile" : "natb.log",
+  "keywords": [
+  ],
+  "author": "Neo Hsu (neo@gmail.com)",
+  "maintainers": [
+  ],
+  "contributors": [
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "preferGlobal": false,
+  "dependencies": {
+    "cloudinary": "*",
+  	"express-partials": "*",
+  	"ejs": "*"
+  },
+  "license":"",
+  "private": true
+}

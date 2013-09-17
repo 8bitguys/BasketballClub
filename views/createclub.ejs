@@ -1,0 +1,42 @@
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">			    
+		    <form name="createclub" action="/createclub" method="post" enctype="multipart/form-data"> 
+				<div class="page-header">
+					<h1>
+						聯盟名稱
+					</h1>
+					<input type="text" name= 'clubName' placeholder="聯盟名稱" class="form-control">				
+				</div>
+				<div class="page-header">
+					<h1>
+						聯盟介紹
+					</h1>
+				<div class="ui-TextField ajax Module"><textarea class="content" placeholder="公告聯盟資訊，報名方式，比賽場地，時間等等..." name= 'clubInfo'></textarea></div>			   
+				</div>
+				<div class="page-header">
+					<h3>上傳圖片	
+						<input id="fileupload" type="file" name="file">				
+					</h3>					
+				</div>
+				<fieldset>
+					<legend>管理規章</legend>
+					<p>
+						<label>籃球幫為免費的籃球社群經營平台，加入的聯盟須同意下列管理規章。</label>
+					</p>
+					<ol>
+						<li>
+							<label>加入籃球幫的聯盟性質需與籃球運動相關。</label>
+						</li>
+						<li>
+							<label>籃球幫為公開平台，提供給大眾閱讀，分享。</label>
+						</li>
+					</ol> <label class="checkbox"><input type="checkbox" />同意</label> 
+					<% if(req.session.user && req.session.user.authority && req.session.user.authority > 1){ %>
+					<button class="btn" type="submit" value='createclub'>提交</button>
+					<% } %>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>

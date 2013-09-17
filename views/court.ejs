@@ -1,0 +1,54 @@
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+	<script>							
+	$(document).ready(function() { 
+	
+		$('div#address').each(function() {
+		   var link = "<a class='various fancybox.iframe' href='http://maps.google.com/maps?q=" + encodeURIComponent( $(this).text() ) + "'>" + $(this).text() + "</a>";
+		   $(this).html(link);
+		});	
+	   
+		$(".various").fancybox({
+		maxWidth	: 800,
+		maxHeight	: 600,
+		fitToView	: false,
+		width		: '70%',
+		height		: '70%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	    });	    
+	});
+	</script>	
+	
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			<ul class="thumbnails">		
+                <%  for(var i=0;i<court.length;i++) { %>
+				<li class="span5">
+					<div class="thumbnail">
+						<img alt="300x200" src="<%= court[i].CourtImg.url%>" />
+						<div class="caption">
+							<h3>
+								<%= court[i].crtName%>
+							</h3>					
+							<div id='address'>	
+							    <%= court[i].crtAddr%>
+							</div>			
+					        <div class="ui-TextField ajax Module"><textarea class="content" placeholder="告訴你的朋友什麼時候要來這裡打球..."></textarea></div>
+							<p>
+								 <a class="btn" href="#">約球</a>
+							</p>
+						</div>
+					</div>
+				</li>
+                <% } %>
+								
+			</ul>
+		</div>
+	</div>
+</div>
